@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/profile_pic.dart';
+import 'file:///G:/Project/tibuexample/lib/profile/profile_pic.dart';
 
 class Body extends StatelessWidget {
   @override
