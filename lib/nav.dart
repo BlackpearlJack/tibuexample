@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'home_screen.dart';
+import 'Screens/home_screen.dart';
 
 
 class Nav extends StatefulWidget {
@@ -25,8 +25,6 @@ class _NavState extends State<Nav> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Tintin',),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

@@ -16,8 +16,8 @@ class _HomeState extends State<Home> {
       height: 120,
       width: 240,
       decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(15.0)
+          color: color,
+          borderRadius: BorderRadius.circular(15.0)
       ),
 
       child: Column(
@@ -27,15 +27,15 @@ class _HomeState extends State<Home> {
           Text(title,style: TextStyle(
             fontSize: 22.0,
             color: Colors.white,
-            ),
+          ),
           ),
           SizedBox(
             height: 5.0,
           ),
           Text(subtitle,
-          style: TextStyle(
-            fontSize: 19.0,
-            color: Colors.white70,
+            style: TextStyle(
+              fontSize: 19.0,
+              color: Colors.white70,
             ),
           ),
         ],
@@ -58,7 +58,7 @@ class _HomeState extends State<Home> {
           Container(
             height: 60.0,
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(image))
+                image: DecorationImage(image: AssetImage(image))
             ),
           ),
           SizedBox(height: 10.0,),
@@ -98,12 +98,12 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.only(top: 10.0, left: 10.0),
                 child: Text(
-                    'Selected Cleaning',
-                style: TextStyle(
-                  fontSize: 19,
-                  color: Colors.black87,
-                  fontWeight: FontWeight.w500,
-                ),
+                  'Selected Cleaning',
+                  style: TextStyle(
+                    fontSize: 19,
+                    color: Colors.black87,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
               SingleChildScrollView(
@@ -113,28 +113,28 @@ class _HomeState extends State<Home> {
                     left: 30.0,
                     top: 30.0,
                   ),
-                    child: Row(
-                      children: [
-                        _selectedCleaning(
-                            color: Theme.of(context).accentColor,
-                            title: 'Home Cleaning',
-                            subtitle: 'Call for today'
-                        ),
-                        _selectedCleaning(
-                            color: Theme.of(context).accentColor,
-                            title: 'Home Cleaning',
-                            subtitle: 'Call for tomorrow'
-                        ),
-                      ],
-                    ),
+                  child: Row(
+                    children: [
+                      _selectedCleaning(
+                          color: Theme.of(context).accentColor,
+                          title: 'Home Cleaning',
+                          subtitle: 'Call for today'
+                      ),
+                      _selectedCleaning(
+                          color: Theme.of(context).accentColor,
+                          title: 'Home Cleaning',
+                          subtitle: 'Call for tomorrow'
+                      ),
+                    ],
+                  ),
                 ),
               ),
-              Container(
-                 padding: EdgeInsets.symmetric(
-                   horizontal: 20.0,
-                   vertical: 30.0,
-                 ),
-                
+              Container(//hae
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20.0,
+                  vertical: 30.0,
+                ),
+
                 child: Column(
                   children: [
                     Text(
@@ -179,4 +179,3 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
