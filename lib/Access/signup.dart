@@ -30,7 +30,7 @@ class _SignupPageState extends State<SignupPage> {
                     style: TextStyle(
                         fontSize: 80.0,
                         fontWeight: FontWeight.bold,
-                        color: Colors.green),
+                        color: Colors.teal),
                   ),
                 )
               ],
@@ -50,7 +50,7 @@ class _SignupPageState extends State<SignupPage> {
                         // hintText: 'EMAIL',
                         // hintStyle: ,
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
+                            borderSide: BorderSide(color: Colors.teal))),
                   ),
                   SizedBox(height: 10.0),
                   TextField(
@@ -61,7 +61,7 @@ class _SignupPageState extends State<SignupPage> {
                             fontWeight: FontWeight.bold,
                             color: Colors.grey),
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
+                            borderSide: BorderSide(color: Colors.teal))),
                     obscureText: true,
                   ),
                   SizedBox(height: 10.0),
@@ -73,15 +73,15 @@ class _SignupPageState extends State<SignupPage> {
                             fontWeight: FontWeight.bold,
                             color: Colors.grey),
                         focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.green))),
+                            borderSide: BorderSide(color: Colors.teal))),
                   ),
                   SizedBox(height: 50.0),
                   Container(
                       height: 40.0,
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
-                        shadowColor: Colors.greenAccent,
-                        color: Colors.green,
+                        shadowColor: Colors.tealAccent,
+                        color: Colors.teal,
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {},

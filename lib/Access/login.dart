@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     '.',
                     style: TextStyle(
-                      fontSize: 80.0, fontWeight: FontWeight.bold, color: Colors.green,
+                      fontSize: 80.0, fontWeight: FontWeight.bold, color: Colors.teal,
                     ),
                   ),
                 ),
@@ -59,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.grey,
                     ),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green),
+                      borderSide: BorderSide(color: Colors.teal),
                     ),
                   ),
                 ),
@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       color: Colors.grey,
                     ),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.green),
+                      borderSide: BorderSide(color: Colors.teal),
                     ),
                   ),
                   obscureText: true,
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: InkWell(
                     child: Text('Forgot Password',
                       style: TextStyle(
-                          color: Colors.green,
+                          color: Colors.teal,
                           fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
                           decoration: TextDecoration.underline
@@ -98,8 +98,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 40.0,
                   child: Material(
                     borderRadius: BorderRadius.circular(20.0),
-                    shadowColor: Colors.greenAccent,
-                    color: Colors.green,
+                    shadowColor: Colors.tealAccent,
+                    color: Colors.teal,
                     elevation: 7.0,
                     child: GestureDetector(
                       onTap: () {
@@ -172,7 +172,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text('Register',
                   style: TextStyle(
-                      color: Colors.green,
+                      color: Colors.teal,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Montserrat',
                       decoration: TextDecoration.underline

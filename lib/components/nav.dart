@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'Screens/home_screen.dart';
+import '../Screens/home_screen.dart';
 
 
 class Nav extends StatefulWidget {
@@ -11,8 +11,8 @@ class Nav extends StatefulWidget {
 class _NavState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget>_widgetOptions = <Widget>[
-    Text('My Consults'),
     Home(),
+    Text('My Consults'),
     Text('More'),
   ];
 
@@ -31,12 +31,12 @@ class _NavState extends State<Nav> {
       bottomNavigationBar: BottomNavigationBar(
         items: const<BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt_outlined),
-            title: Text('My Consults'),
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             title: Text('Home',),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list_alt_outlined),
+            title: Text('My Consults'),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add),
