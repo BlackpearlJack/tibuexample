@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             child: ListView(
-              padding: EdgeInsets.only(left: 10, top: 10),
+              padding: EdgeInsets.only(left: 5, top: 5,),
               children: [
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,//learn this
@@ -119,33 +119,39 @@ class _HomeState extends State<Home> {
                     ),
                     child: Row(
                       children: <Widget>[
-                        Container(
-                          width: 300.0,
-                          child: Card(
-                            child: Wrap(
-                              children: <Widget>[
-                                Image.asset('assets/images/pic1.jpg'),
-                              ],
+                        Card(
+                          child: Container(
+                            width: (MediaQuery.of(context).size.width),
+                            child: Card(
+                              child: Wrap(
+                                children: <Widget>[
+                                  Image.asset('assets/images/pic1.jpg'),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                        Container(
-                          width: 300.0,
-                          child: Card(
-                            child: Wrap(
-                              children: <Widget>[
-                                Image.asset('assets/images/pic2.jpg'),
-                              ],
+                        Card(
+                          child: Container(
+                            width: (MediaQuery.of(context).size.width),
+                            child: Card(
+                              child: Wrap(
+                                children: <Widget>[
+                                  Image.asset('assets/images/pic2.jpg'),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                        Container(
-                          width: 300.0,
-                          child: Card(
-                            child: Wrap(
-                              children: <Widget>[
-                                Image.asset('assets/images/pic3.jpg'),
-                              ],
+                        Card(
+                          child: Container(
+                            width: (MediaQuery.of(context).size.width),
+                            child: Card(
+                              child: Wrap(
+                                children: <Widget>[
+                                  Image.asset('assets/images/pic3.jpg'),
+                                ],
+                              ),
                             ),
                           ),
                         ),
@@ -153,6 +159,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                 ),
+                SizedBox(height: 10.0,),
                 Container(//hae
                   padding: EdgeInsets.symmetric(
                     horizontal: 20.0,
@@ -170,27 +177,64 @@ class _HomeState extends State<Home> {
                       ),
                       Padding(padding: EdgeInsets.only(
                         top: 20.0,),
-                        child: Container(
-                          height: 300,
-                          child: GridView.count(
-                            crossAxisCount: 3,
-                            crossAxisSpacing: 12,
-                            mainAxisSpacing: 8,
-                            childAspectRatio: 1.00,
-                            children: [
-                              _selectedExtras(
-                                  image: 'assets/images/homevist.png',
-                                  name: 'Home Visit'
+                        child: Column(
+                          children: <Widget>[
+                            Container(
+                              height: 110,
+                              width: (MediaQuery.of(context).size.width),
+                              child: GridView.count(
+                                crossAxisCount: 3,
+                                crossAxisSpacing: 12,
+                                mainAxisSpacing: 8,
+                                childAspectRatio: 1.00,
+                                children: [
+                                  _selectedExtras(
+                                      image: 'assets/images/homevist.png',
+                                      name: 'Home Visit'
+                                  ),
+                                  _selectedExtras(
+                                      image: "assets/images/packages.png",
+                                      name: 'Packages'
+                                  ),
+                                  _selectedExtras(
+                                      image: 'assets/images/lab.jpg',
+                                      name: 'Lab Pickup'),
+                                ],
                               ),
-                              _selectedExtras(
-                                  image: "assets/images/packages.png",
-                                  name: 'Packages'
-                              ),
-                              _selectedExtras(
-                                  image: 'assets/images/lab.jpg',
-                                  name: 'Lab Pickup'),
-                            ],
-                          ),
+                            ),
+                            SizedBox(height: 10.0,),
+                            Column(
+                              children: <Widget>[
+                                Text(
+                                  'Available Packages',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                Container(
+                                  width: (MediaQuery.of(context).size.width),
+                                  child: Card(
+                                    child: Wrap(
+                                      children: <Widget>[
+                                        Image.asset('assets/images/eye.jpg'),
+                                        Text('Eye Care Package',
+                                          style: TextStyle(
+                                            fontSize: 20.0,
+                                            color: Colors.tealAccent,
+                                          ),),
+                                        Text('  KES 4566',
+                                          style: TextStyle(
+                                          fontSize: 20.0,
+                                          color: Colors.black,
+                                        ),)
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ],
