@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Screens/consults.dart';
+import 'package:flutter_app/Screens/more.dart';
 
 import '../Screens/home_screen.dart';
 
@@ -12,8 +14,8 @@ class _NavState extends State<Nav> {
   int _selectedIndex = 0;
   List<Widget>_widgetOptions = <Widget>[
     Home(),
-    Text('My Consults'),
-    Text('More'),
+    Consults(),
+    More(),
   ];
 
   void _onItemTap(int index){
@@ -24,27 +26,29 @@ class _NavState extends State<Nav> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const<BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text('Home',),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.list_alt_outlined),
-            title: Text('My Consults'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.add),
-            title: Text('More'),
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTap,
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: const<BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home',),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.list_alt_outlined),
+              title: Text('My Consults'),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.add),
+              title: Text('More'),
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTap,
+        ),
       ),
     );
   }

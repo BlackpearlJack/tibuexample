@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.tealAccent,
+          backgroundColor: Colors.teal,
           title: Text(
             'Hello, '
                 'Ella',
