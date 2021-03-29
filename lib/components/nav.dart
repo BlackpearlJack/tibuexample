@@ -34,14 +34,17 @@ class _NavState extends State<Nav> {
         bottomNavigationBar: BottomNavigationBar(
           items: const<BottomNavigationBarItem>[
             BottomNavigationBarItem(
+              backgroundColor: Colors.tealAccent,
               icon: Icon(Icons.home),
               title: Text('Home',),
             ),
             BottomNavigationBarItem(
+              backgroundColor: Colors.tealAccent,
               icon: Icon(Icons.list_alt_outlined),
               title: Text('My Consults'),
             ),
             BottomNavigationBarItem(
+              backgroundColor: Colors.tealAccent,
               icon: Icon(Icons.add),
               title: Text('More'),
             ),

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/profile/profile_screen.dart';
 
+import 'contact_screen.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -9,39 +11,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  Widget _selectedCleaning({@required Color color, @required String title, @required String subtitle})   {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: 10.0),
-      padding: EdgeInsets.only(left: 20,),
-      height: 120,
-      width: 240,
-      decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(15.0)
-      ),
-
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(title,style: TextStyle(
-            fontSize: 22.0,
-            color: Colors.white,
-          ),
-          ),
-          SizedBox(
-            height: 5.0,
-          ),
-          Text(subtitle,
-            style: TextStyle(
-              fontSize: 19.0,
-              color: Colors.white70,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 
   Widget _selectedExtras({@required String image,@required String name }){
     return Container(
@@ -243,6 +212,16 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.tealAccent,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ContactScreen()),
+            );
+          },
+          child: Icon(Icons.message),
         ),
       ),
     );
