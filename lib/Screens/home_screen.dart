@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  Widget _selectedExtras({@required String image,@required String name }){
+  Widget _selectedExtras({required String image,required String name }){
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),

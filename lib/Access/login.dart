@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/ICTA%20NOC/Documents/flutter_app/lib/Access/widgets/google_sign_in_button.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -144,17 +143,12 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           SizedBox(width: 10.0,),
                           Center(
-                            child:InkWell(
-                              onTap: (){
-                                return GoogleSignInButton();
-                              },
-                              child: Text(
-                                'Log in With Gmail',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Montserrat',
-                                ),),
-                            ),
+                            child:Text(
+                              'Log in With Gmail',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Montserrat',
+                              ),),
                           ),
                         ],
                       ),

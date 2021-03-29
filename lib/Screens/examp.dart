@@ -9,7 +9,7 @@ class _HomeState extends State<Home> {
 
 
 
-  Widget _selectedCleaning({@required Color color, @required String title, @required String subtitle})   {
+  Widget _selectedCleaning({required Color color, required String title, required String subtitle})   {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10.0),
       padding: EdgeInsets.only(left: 20,),
@@ -43,7 +43,7 @@ class _HomeState extends State<Home> {
     );
   }
 
-  Widget _selectedExtras({@required String image,@required String name }){
+  Widget _selectedExtras({required String image,required String name }){
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
