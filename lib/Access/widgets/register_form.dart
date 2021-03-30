@@ -122,7 +122,7 @@ class _RegisterFormState extends State<RegisterForm> {
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    CustomColors.firebaseOrange,
+                    CustomColors.appTeal,
                   ),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
@@ -178,19 +178,31 @@ class _RegisterFormState extends State<RegisterForm> {
             ),
           ),
           SizedBox(height: 16.0),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                _routeToSignInScreen(),
-              );
-            },
-            child: Text(
-              'Already have an account? Sign in',
-              style: TextStyle(
-                color: CustomColors.firebaseGrey,
-                letterSpacing: 0.5,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("Don't Have An Account ?",
+                style: TextStyle(
+                  fontFamily: 'Montserrat',
+                ),
               ),
-            ),
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                    _routeToSignInScreen(),
+                  );
+                },
+                child: Text(
+                  'Sign in',
+                  style: TextStyle(
+                      color: Colors.teal,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Montserrat',
+                      decoration: TextDecoration.underline
+                  ),
+                ),
+              ),
+            ],
           )
         ],
       ),

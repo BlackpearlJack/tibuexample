@@ -22,26 +22,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
         _passwordFocusNode.unfocus();
       },
       child: Scaffold(
-        backgroundColor: CustomColors.firebaseNavy,
-        appBar: AppBar(
+          backgroundColor: CustomColors.firebaseGrey,
+          appBar: AppBar(
           elevation: 0,
-          backgroundColor: CustomColors.firebaseNavy,
+          backgroundColor: CustomColors.appTeal,
           title: AppBarTitle(),
-        ),
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.only(
+          ),
+          resizeToAvoidBottomInset: false,
+          body: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.only(
               left: 16.0,
               right: 16.0,
               bottom: 20.0,
+              ),
+              child: Container(
+                child: RegisterForm(
+                  nameFocusNode: _nameFocusNode,
+                  emailFocusNode: _emailFocusNode,
+                  passwordFocusNode: _passwordFocusNode,
+                ),
+              ),
             ),
-            child: RegisterForm(
-              nameFocusNode: _nameFocusNode,
-              emailFocusNode: _emailFocusNode,
-              passwordFocusNode: _passwordFocusNode,
-            ),
-          ),
-        ),
+          )
       ),
     );
   }

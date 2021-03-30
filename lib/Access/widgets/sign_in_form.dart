@@ -5,6 +5,7 @@ import 'package:flutter_app/Access/screens/register_screen.dart';
 import 'package:flutter_app/Access/screens/user_info_screen.dart';
 import 'package:flutter_app/Access/utils/authentication.dart';
 import 'package:flutter_app/Access/utils/validator.dart';
+import 'package:flutter_app/Screens/welcome_screen.dart';
 
 import 'custom_form_field.dart';
 
@@ -86,7 +87,7 @@ class _SignInFormState extends State<SignInForm> {
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    CustomColors.firebaseOrange,
+                    CustomColors.appTeal,
                   ),
                   shape: MaterialStateProperty.all(
                     RoundedRectangleBorder(
@@ -113,9 +114,7 @@ class _SignInFormState extends State<SignInForm> {
                     if (user != null) {
                       Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
-                          builder: (context) => UserInfoScreen(
-                            user: user,
-                          ),
+                          builder: (context) =>WelcomeScreen(),
                         ),
                       );
                     }
@@ -141,22 +140,34 @@ class _SignInFormState extends State<SignInForm> {
             ),
           ),
           SizedBox(height: 16.0),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => RegisterScreen(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text("Don't Have An Account ?",
+                style: TextStyle(
+                  fontFamily: 'Montserrat',
                 ),
-              );
-            },
-            child: Text(
-              'Don\'t have an account? Sign up',
-              style: TextStyle(
-                color: CustomColors.firebaseGrey,
-                letterSpacing: 0.5,
               ),
-            ),
-          )
+              SizedBox(width: 5.0,),
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => RegisterScreen(),
+                    ),
+                  );
+                },
+                child: Text('Sign Up',
+                  style: TextStyle(
+                      color: Colors.teal,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Montserrat',
+                      decoration: TextDecoration.underline
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

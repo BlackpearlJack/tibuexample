@@ -42,43 +42,43 @@ class CustomFormField extends StatelessWidget {
       textCapitalization:
       isCapitalized ? TextCapitalization.words : TextCapitalization.none,
       textInputAction: _inputAction,
-      cursorColor: CustomColors.firebaseYellow,
+      cursorColor: CustomColors.appTeal,
       validator: (value) => _validator(value!),
       decoration: InputDecoration(
         labelText: _label,
-        labelStyle: TextStyle(color: CustomColors.firebaseYellow),
+        labelStyle: TextStyle(color: CustomColors.appTeal),
         hintText: _hint,
         hintStyle: TextStyle(
-          color: CustomColors.firebaseGrey.withOpacity(0.5),
+          color: CustomColors.firebaseNavy,
         ),
         errorStyle: TextStyle(
-          color: Colors.redAccent,
+          color: Colors.white,
           fontWeight: FontWeight.bold,
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
           borderSide: BorderSide(
-            color: CustomColors.firebaseAmber,
+            color: CustomColors.appTeal,
             width: 2,
           ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
           borderSide: BorderSide(
-            color: CustomColors.firebaseGrey.withOpacity(0.5),
+            color: CustomColors.appTeal,
           ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
           borderSide: BorderSide(
-            color: Colors.redAccent,
+            color: Colors.greenAccent,
             width: 2,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
           borderSide: BorderSide(
-            color: Colors.redAccent,
+            color: Colors.greenAccent,
             width: 2,
           ),
         ),
